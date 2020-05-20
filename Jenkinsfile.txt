@@ -5,11 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                build job: 'seleniumFreeStyle'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                build job: 'seleniumProject2'
             }
         }
         stage('Deploy') {
